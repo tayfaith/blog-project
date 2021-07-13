@@ -3,22 +3,21 @@ ul.header {
     margin: 0;
     padding: 0;
     background-color: pink;
+   
 }
 
-li {
+li.header {
     display: inline-block;
     padding: 0px 20px;
+    background-color: pink;
+    
 }
 
 #web-name{
     color: black;
     font-size: 50px;
     font-weight: 300;
-}
-
-#header{
-    text-align: center;
-    padding: 5px;
+    
 }
 
   a.nav{
@@ -34,65 +33,114 @@ li {
       text-decoration:underline;
   }
 
-  .bio{
-    width:20%;
+body {
+    font-family: Arial;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: left;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn { 
+    float: left;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 400px 100px;
+    grid-template-rows: 50px 100px 500px 300px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd"
+    "di di di di di di"
+    "im im im mc mc mc"
+    "p p p p p p";
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px solid #A6D8D3;
+
+    /* To center content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  .container{
-    text-align: left;
-    padding: 10px 20px;
+.leftcolumn h2{
+    grid-area: hd;
 }
 
-div.title{
-    color:pink;
-    font-weight:900;
+.leftcolumn h5{
+    grid-area: di;
 }
 
-.container3{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 0.5fr);
-    grid-template-areas: 
-    "hd hd hd hd hd hd hd hd"
-    "ah ah ah ah ah ah ah ah"
-    "bi bi im im im im im im";
-    
-    /* "bi bi bi ah ah  im im"; */
-    border: 2px solid yellow;
-}
-
-.image{
+.leftcolumn img {
     grid-area: im;
-    border: 2px solid red;
-    width: 500px;
+    
 }
 
-.bio{
-    grid-area: bi;
-    border: 2px solid red;
+.leftcolumn p{
+    grid-area: p;
 }
 
-.article-heading{
-    grid-area:ah;
-    border: 2px solid red;
-    width:750px;
-    text-align: right;
+ul.ingredients {
+    list-style-type: disc;
 }
 
-.header{
-    grid-area:hd;
-    border:2px solid red;
+.rightcolumn{
+    float: left;
+    width: 35%;
+    padding-left: 20px;
 }
+  /* Right column */
+  .author{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-.footer{
-    background-color: pink;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px solid #A6D8D3;
+  }
+  
+  /* Author image */
+  #author{
     width: 100%;
-    padding:0 25px;
+    padding: 10px;
+  }
+  
+  div.spacing{
+      line-height: 1.4;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
     text-align: center;
-}
+    background: pink;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn { 
+      width: 100%;
+      padding: 0;
+    }
+  }
 
 .footer .social-links a{
     display: inline-block;
