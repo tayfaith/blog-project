@@ -1,11 +1,19 @@
-ul {
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: pink;
 }
 
-li {
+li{
     display: inline-block;
     padding: 0px 20px;
 }
@@ -14,6 +22,17 @@ li {
     color: black;
     font-size: 50px;
     font-weight: 300;
+    font-family:Arial, sans-serif;
+    grid-area: wbn;
+}
+.pageheader{
+    display: grid;
+    grid-template-columns: 180px 380px 280px;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "wbn wbn wbn tt tt tt srh srh srh";
+    padding: 30px;
+    font-size: 40px;
 }
 
 #header{
@@ -21,9 +40,14 @@ li {
     padding: 5px;
 }
 
+#search{
+    grid-area: srh;
+}
 a.nav{
     font-size: 20px;
     color: black;
+    font-family:Arial, sans-serif;
+    grid-area: tt;
 }
 
 a.nav:link{
@@ -34,26 +58,36 @@ a.nav:hover{
     text-decoration: underline;
 }
 
-.container1, .container2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 50px;
-}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    background-color: #f1f1f1;
 
-.bread,.cake,.tart,.chicken,.wedges,.toast {
-    width:20%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-    border:2px solid pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   
-.container{
-    text-align: center;
-    padding: 10px 20px;
-}
 
+.column {
+    float: left;
+    width: 33%;
+    padding: 10px 20px;
+  }
+  
+
+.row1, .row2 {
+    margin: 0 -5px;
+}
+  
+
+.row1, .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
 img{
     height:300px;
     float: left;
@@ -77,6 +111,7 @@ a.link{
     width: 100%;
     padding:0 25px;
     text-align: center;
+    font-family:Arial, sans-serif;
 }
 
 .footer .social-links a{
@@ -97,6 +132,27 @@ a.link{
     color: gray;
 }
 
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .pageheader{
+        display: grid;
+        grid-template-columns: 100px;
+        grid-template-rows: 50px 50px 50px;
+        grid-template-areas: 
+        "wbn wbn wbn wbn wbn wbn"
+        "tt tt tt tt tt tt"
+        "srh srh srh srh srh srh";
+        padding: 30px;
+        font-size: 40px;
+    }
+}
 
 
 
