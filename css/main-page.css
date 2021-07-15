@@ -1,0 +1,17 @@
+@import "main-page-header.css";
+@import "main-page-body.css";
+@import "main-page-footer.css";
+@import "blog-page.css";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+

@@ -1,0 +1,48 @@
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    background-color: #f1f1f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 10px 20px;
+  }
+  
+
+.row1, .row2 {
+    margin: 0 -5px;
+}
+  
+
+.row1, .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+img.main{
+    height:300px;
+    width: 100%;
+    float: left;
+    object-fit: cover;
+}
+
+a.link:link{
+    text-decoration:none;
+}
+
+a.link:hover{
+    text-decoration:underline;
+}
+
+a.link{
+    font-family:Arial, sans-serif;
+}

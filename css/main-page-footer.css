@@ -1,0 +1,35 @@
+.footer{
+    background-color: pink;
+    width: 100%;
+    padding:0 25px;
+    text-align: center;
+    font-family:Arial, sans-serif;
+}
+
+.footer .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    background-color: gray;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.footer .social-links a:hover{
+    background-color: white;
+    color: gray;
+}
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+  }
+
