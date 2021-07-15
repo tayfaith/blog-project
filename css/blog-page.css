@@ -84,8 +84,8 @@ body {
 
 .leftcolumn img {
     grid-area: im;
-    height: 550px;
-    width: 500px;
+    height: auto;
+    width: 100%;
     
 }
 
@@ -140,7 +140,7 @@ ul.ingredients {
   }
   
   @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn { 
+    .leftcolumn, .rightcolumn {
       width: 100%;
       padding: 0;
     }
@@ -163,4 +163,5 @@ ul.ingredients {
     background-color: white;
     color: gray;
 }
+
 
